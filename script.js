@@ -60,6 +60,7 @@ const printInfo = (key = 0, members = groupMembers, clearFunction = clearPanel) 
   // cria o objeto que vai receber o pdf
   const newBoard = document.createElement('object');
   // adiciona os atributos necessários
+  newBoard.setAttribute('class', 'board');
   newBoard.setAttribute('data', members[key].route);
   newBoard.setAttribute('type', 'application/pdf');
   newBoard.innerText = 'Seu navegador não suporta PDFs';
