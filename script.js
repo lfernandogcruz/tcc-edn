@@ -47,13 +47,13 @@ const clearPanel = (panel) => {
 
 // função que imprime as infos no painel
 const printInfo = (key = 0, members = groupMembers, clearFunction = clearPanel) => {
-  if (key === 0) return null;
-
   // seleciona o painel
   const panel = document.getElementById('panel');
-
+  
   // limpa o painel
   clearFunction(panel);
+  
+  if (key === 0) return null;
 
   // cria o objeto que vai receber o pdf
   const newBoard = document.createElement('object');
