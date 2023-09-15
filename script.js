@@ -57,6 +57,11 @@ const printInfo = (key = 0, members = groupMembers, clearFunction = clearPanel) 
 
   const lineBreak = document.createElement('br');
 
+  // cria o nome do membro
+  const memberName = document.createElement('h2');
+  const nameString = `Currículo de ${members[key].name}`;
+  memberName.innerText = nameString;
+
   // cria o objeto que vai receber o pdf
   const newBoard = document.createElement('object');
   // adiciona os atributos necessários
@@ -91,6 +96,10 @@ const printInfo = (key = 0, members = groupMembers, clearFunction = clearPanel) 
   linkedinText.appendChild(linkedinLink);
 
   // adiciona os elementos ao painel
+  panel.appendChild(memberName);
+
+  panel.appendChild(lineBreak);
+
   panel.appendChild(newBoard);
   panel.appendChild(downloadText);
   
