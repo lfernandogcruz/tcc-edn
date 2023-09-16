@@ -6,7 +6,7 @@
 }
 
 .body {
-  background-color: #CEF6FF 0.9;
+  background-color: #cef6ff 0.9;
   font-family: Arial, Helvetica, sans-serif;
   width: 1440px;
   height: 1024px;
@@ -33,14 +33,6 @@
 
 /* .header p  */
 
-.show {
-  visibility: visible;
-}
-
-.noshow {
-  visibility: hidden;
-}
-
 .menu {
   overflow: hidden;
 }
@@ -63,6 +55,7 @@
   height: 100%;
   /* background-color: #f2f2f2; */
   padding: 20px;
+  display: inline;
 }
 
 .stage-team {
@@ -70,6 +63,7 @@
   height: 100%;
   /* background-color: #f2f2f2; */
   padding: 50px;
+  display: none;
 }
 
 .panel {
@@ -77,12 +71,10 @@
   height: 400px;
   /* background-color: #f2f2f2; */
   padding: 20px;
- 
 }
 
 .panel p {
   font-size: 20px;
-
 }
 
 .board {
@@ -94,7 +86,7 @@
 }
 
 .board img {
-	border: solid 1px #026592;
+  border: solid 1px #026592;
 }
 
 .footer {
