@@ -83,6 +83,7 @@ const printInfo = (key = 0, members = groupMembers, clearFunction = clearPanel) 
   const altString = `Currículo de ${members[key].name}`;
   resumePageOne.setAttribute('src', members[key].jpg1);
   resumePageOne.setAttribute('alt', altString);
+  resumePageOne.style.backgroundColor = 'white';
 
   newBoard.appendChild(resumePageOne);
 
@@ -90,6 +91,7 @@ const printInfo = (key = 0, members = groupMembers, clearFunction = clearPanel) 
     const resumePageTwo = document.createElement('img');
     resumePageTwo.setAttribute('src', members[key].jpg2);
     resumePageTwo.setAttribute('alt', altString);
+    resumePageTwo.style.backgroundColor = 'white';
     newBoard.appendChild(resumePageTwo);
   }
 
