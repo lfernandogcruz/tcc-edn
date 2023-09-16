@@ -9,6 +9,8 @@ const groupMembers = {
   2: {
     name: 'Cristiane Miranda',
     route: './images/cristiane-miranda.pdf',
+    jpg1: './images/cv-jpg/cristiane1.jpg',
+    jpg2: './images/cv-jpg/cristiane2.jpg',
     social: 'cristiane-morales-de-miranda',
   },
   3: {
@@ -27,7 +29,7 @@ const groupMembers = {
     social: 'linkedin.com/in/luisfgcruz',
   },
   6: {
-    name: 'Pedro Silva',
+    name: 'Pedro Patricio',
     route: './images/pedro-silva.pdf',
     social: 'pedro-patricio-7905b1270',
   },
@@ -59,19 +61,35 @@ const printInfo = (key = 0, members = groupMembers, clearFunction = clearPanel) 
 
   // cria o nome do membro
   const memberName = document.createElement('h2');
+  memberName.setAttribute('class', 'member-name');
   const nameString = `Currículo de ${members[key].name}`;
   memberName.innerText = nameString;
 
-  // cria o objeto que vai receber o pdf
-  const newBoard = document.createElement('object');
-  // adiciona os atributos necessários
+  // // cria o objeto que vai receber o pdf
+  // const newBoard = document.createElement('object');
+  // // adiciona os atributos necessários
+  // newBoard.setAttribute('class', 'board');
+  // newBoard.setAttribute('data', members[key].route);
+  // newBoard.setAttribute('type', 'application/pdf');
+  // newBoard.innerText = 'Seu navegador não suporta PDFs';
+
+  // cria o elemento que vai receber o cv
+  const newBoard = document.createElement('div');
   newBoard.setAttribute('class', 'board');
-  newBoard.setAttribute('data', members[key].route);
-  newBoard.setAttribute('type', 'application/pdf');
-  newBoard.innerText = 'Seu navegador não suporta PDFs';
+  const resumePageOne = document.createElement('img');
+  const resumePageTwo = document.createElement('img');
+  const altString = `Currículo de ${members[key].name}`;
+  resumePageOne.setAttribute('src', members[key].jpg1);
+  resumePageOne.setAttribute('alt', altString);
+  resumePageTwo.setAttribute('src', members[key].jpg2);
+  resumePageTwo.setAttribute('alt', altString);
+
+  newBoard.appendChild(resumePageOne);
+  newBoard.appendChild(resumePageTwo);
 
   // cria o texto que vai ser mostrado para download do PDF
   const downloadText = document.createElement('p');
+  downloadText.setAttribute('class', 'download-text');
   downloadText.innerText = 'Você pode baixar o arquivo clicando ';
 
   // cria o link para download do PDF
@@ -84,6 +102,7 @@ const printInfo = (key = 0, members = groupMembers, clearFunction = clearPanel) 
 
   // cria o texto que vai ser mostrado para acesso ao linkedin
   const linkedinText = document.createElement('p');
+  linkedinText.setAttribute('class', 'linkedin-text');
   linkedinText.innerText = 'Você pode acessar o perfil do Linkedin clicando ';
 
   // cria o link para o linkedin
@@ -110,3 +129,46 @@ const printInfo = (key = 0, members = groupMembers, clearFunction = clearPanel) 
 };
 
 printInfo();
+
+const headerMap = {
+  0: {
+    name: 'Projeto',
+    content: 'Projeto',
+  },
+  1: {
+    name: 'Serviços',
+    content: 'Serviços',
+  },
+  2: {
+    name: 'Arquitetura',
+    content: 'Arquitetura',
+  },
+  3: {
+    name: 'Equipe',
+    content: 'Equipe',
+  },
+};
+
+const resetShow = (el1, el2) => {
+  el1.removeAttribute('class', 'show');
+  el1.removeAttribute('class', 'noshow');
+  el2.removeAttribute('class', 'show');
+  el2.removeAttribute('class', 'noshow');
+}
+
+const headerClick = (key = 0, reset = resetShow) => {
+
+  const stageTeam = document.getElementById('stage-team');
+  const stageGeneral = document.getElementById('stage-general');
+  reset(stageTeam, stageGeneral);
+
+  if (key !== 3) {
+    stageGeneral.setAttribute('class', 'show');
+  };
+
+  if (key === 3) {
+    stageTeam.setAttribute('class', 'show');
+  };
+}
+
+headerClick();

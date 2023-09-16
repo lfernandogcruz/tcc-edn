@@ -8,24 +8,31 @@
   </head>
   <body class="body">
     <header class="header">
-      <h1 class="h1">Currículos Grupo 01</h1>
+      <div class="header-option" onclick="headerClick(0)">Projeto</div>
+      <div class="header-option" onclick="headerClick(1)">Serviços</div>
+      <div class="header-option" onclick="headerClick(2)">Arquitetura</div>
+      <div class="header-option" onclick="headerClick(3)">Equipe</div>
     </header>
     <main>
-      <nav class="menu">
-        <p class="menu-option" onclick="printInfo(0)">Home</p>
-        <p class="menu-option" onclick="printInfo(1)">Alan Brauna</p>
-        <p class="menu-option" onclick="printInfo(2)">Cristiane Miranda</p>
-        <p class="menu-option" onclick="printInfo(3)">Emerson Lopes</p>
-        <p class="menu-option" onclick="printInfo(4)">Jonathas Freitas</p>
-        <p class="menu-option" onclick="printInfo(5)">Luis Cruz</p>
-        <p class="menu-option" onclick="printInfo(6)">Pedro Silva</p>
-        <p class="menu-option" onclick="printInfo(7)">Samantha Maia</p>
-      </nav>
-      <section class="panel" id="panel">        
+      <section class="stage-general noshow"></section>
+      <section class="stage-team show">
+        <nav class="menu">
+          <p class="menu-option" onclick="printInfo(1)">Alan Brauna</p>
+          <p class="menu-option" onclick="printInfo(2)">Cristiane Miranda</p>
+          <p class="menu-option" onclick="printInfo(3)">Emerson Lopes</p>
+          <p class="menu-option" onclick="printInfo(4)">Jonathas Freitas</p>
+          <p class="menu-option" onclick="printInfo(5)">Luis Cruz</p>
+          <p class="menu-option" onclick="printInfo(6)">Pedro Patrício</p>
+          <p class="menu-option" onclick="printInfo(7)">Samantha Maia</p>
+        </nav>
+        <section class="panel" id="panel"></section>
       </section>
     </main>
     <footer class="footer">
-      <p>Desenvolvido por: Alan Brauna, Cristiane Miranda, Emerson Lopes, Jonathas Freitas, Luis Cruz, Pedro Silva e Samantha Maia</p>
+      <p>
+        Desenvolvido por: Alan Brauna, Cristiane Miranda, Emerson Lopes, Jonathas Freitas,
+        Luis Cruz, Pedro Silva e Samantha Maia
+      </p>
     </footer>
     <script src="./script.js"></script>
   </body>
