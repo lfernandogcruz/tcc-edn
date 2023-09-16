@@ -6,7 +6,7 @@
 }
 
 .body {
-  background-color: #cef6ff 0.9;
+  background-color: #cef6ff 0.95;
   font-family: Arial, Helvetica, sans-serif;
   width: 1440px;
   height: 1024px;
@@ -64,6 +64,7 @@
   /* background-color: #f2f2f2; */
   padding: 50px;
   display: none;
+  margin-left: 28px;
 }
 
 .panel {
@@ -75,6 +76,41 @@
 
 .panel p {
   font-size: 20px;
+}
+
+.member-name {
+  font-family: Archivo Narrow;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #026592;
+}
+
+.download-text {
+  font-family: Archivo Narrow;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #026592;
+}
+
+.download-text a {
+  color: #044462;
+}
+
+.linkedin-text {
+  font-family: Archivo Narrow;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #026592;
+}
+
+.linkedin-text a {
+  color: #044462;
 }
 
 .board {
