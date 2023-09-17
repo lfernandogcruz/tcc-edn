@@ -272,10 +272,10 @@ const printArq = (clearFunction = clearElement) => {
   const text = document.createElement('p');
   text.setAttribute('class', 'arq-text');
   text.innerHTML = `A arquitetura do site foi pensada para ser simples e eficiente.
-    
+    <br>
     O site é estático e não possui banco de dados, o que reduz a complexidade e
     aumenta a velocidade de carregamento.
-    
+    <br>
     O site é hospedado na AWS, na região
     de São Paulo, o que garante baixa latência para os usuários brasileiros.`;
 
