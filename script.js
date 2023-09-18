@@ -149,33 +149,37 @@ printInfo();
 
 const stringsProjeto = {
   0: 'Bem-vindo ao Grupo 1 Soluções Web',
-  1: `Somos uma equipe especializada em <b>criação</b> e <b>hospedagem</b> de sites,
-    e estamos prontos para apresentar a você uma proposta emocionante.
-    Imagine a <b>visibilidade</b> e as <b>oportunidades</b> que podem surgir quando
-    a <strong>XPTO</strong> participar de um evento com a previsão de <b>11 milhões de acessos</b> por mês!`,
+  1: `<br>Somos uma equipe especializada em <b>criação</b> e <b>hospedagem</b> de sites,<br>
+    e estamos prontos para apresentar a você uma proposta emocionante.<br>
+    Imagine a <b>visibilidade</b> e as <b>oportunidades</b> que podem surgir quando<br>
+    a <strong>XPTO</strong> participar de um evento com a previsão de <b>11 milhões de acessos</b>!
+    <br><br>`,
   2: 'O Nosso Objetivo:',
-  3: `Nosso objetivo neste projeto é criar um <strong>site de destaque</strong>
-    para divulgar os currículos dos colaboradores da empresa <strong>XPTO</strong> durante o evento.
-    Estamos falando de um <b>website estático</b>, desenvolvido com as mais recentes tecnologias
-    <b>(HTML5, CSS3, Javascript)</b>, repleto de informações valiosas sobre os <strong>talentos</strong>
-    que farão parte desse grande acontecimento.`,
+  3: `<br>Nosso objetivo neste projeto é criar um <strong>site de destaque</strong><br>
+    para divulgar os currículos dos colaboradores da empresa <strong>XPTO</strong> durante o evento.<br>
+    Estamos falando de um <b>website estático</b>, desenvolvido com as mais recentes tecnologias<br>
+    <b>(HTML5, CSS3, Javascript)</b>, repleto de informações valiosas sobre os <strong>talentos</strong><br>
+    que farão parte desse grande acontecimento.
+    <br><br>`,
   4: 'Por Que Nos Escolher?',
-  5: `Ao escolher o <strong>Grupo 1 Soluções Web</strong>, você estará optando por uma equipe
-    que compreende a importância de uma presença online confiável e eficaz.
-    Trabalharemos incansavelmente para garantir que o seu site seja hospedado
-    com <b>segurança e eficiência</b> na nuvem <b>AWS</b>, aproveitando os serviços de rede
-    de <b>entrega de conteúdo, baixa latência, segurança e armazenamento durável</b>
-    que atenderão facilmente a demanda de <b>11 milhões</b> de requisições (gets e selects) por mês.`,
+  5: `<br>Ao escolher o <strong>Grupo 1 Soluções Web</strong>, você estará optando por uma equipe<br>
+    que compreende a importância de uma presença online confiável e eficaz.<br>
+    Trabalharemos incansavelmente para garantir que o seu site seja hospedado<br>
+    com <b>segurança e eficiência</b> na nuvem <b>AWS</b>, aproveitando os serviços de rede<br>
+    de <b>entrega de conteúdo, baixa latência, segurança e armazenamento durável</b><br>
+    que atenderão facilmente a demanda de <b>11 milhões</b> de requisições (gets e selects).
+    <br><br>`,
   6: 'O Futuro É Agora!',
-  7: `Junte-se a nós nesta jornada rumo ao <b>sucesso</b>.
-    Este é o momento de garantir que a <strong>XPTO</strong> brilhe no cenário do evento,
-    conectando-se com um público amplo e <b>diversificado</b>.
-    O futuro é agora, e nós estamos aqui para torná-lo <b>brilhante</b>.
+  7: `<br>Junte-se a nós nesta jornada rumo ao <b>sucesso</b>.<br>
+    Este é o momento de garantir que a <strong>XPTO</strong> brilhe no cenário do evento,<br>
+    conectando-se com um público amplo e <b>diversificado</b>.<br>
+    O futuro é agora, e nós estamos aqui para torná-lo <b>brilhante</b>.<br><br>
 
-    Entre em contato conosco hoje mesmo para discutir como podemos transformar
-    essa visão em realidade.
-    <strong>Juntos</strong>, alcançaremos novos patamares de <b>sucesso</b> e <b>visibilidade</b> online.`,
-  8: 'Contate-nos agora para saber mais!',
+    Entre em contato conosco hoje mesmo para discutir como podemos transformar<br>
+    essa visão em realidade.<br>
+    <strong>Juntos</strong>, alcançaremos novos patamares de <b>sucesso</b> e <b>visibilidade</b> online.
+    <br><br>`,
+  8: 'Contate-nos agora para saber mais!<br><br><br>',
 };
 
 // home
@@ -260,13 +264,14 @@ const printArq = (clearFunction = clearElement) => {
 
   const text = document.createElement('p');
   text.setAttribute('class', 'arq-text');
-  text.innerHTML = `A arquitetura do site foi pensada para ser simples e eficiente.
+  text.innerHTML = `A arquitetura do site foi pensada para ser <strong>simples e eficiente</strong>.<br>
     <br>
     O site é estático e não possui banco de dados, o que reduz a complexidade e
-    aumenta a velocidade de carregamento.
+    aumenta a <strong>velocidade</strong> de carregamento.<br>
     <br>
-    O site é hospedado na AWS, na região
-    de São Paulo, o que garante baixa latência para os usuários brasileiros.`;
+    O site é hospedado na <strong>AWS</strong>, na região
+    de São Paulo, o que garante baixa latência para os usuários brasileiros.<br>
+    <br><br><br><br><br><br><br>`;
 
   // adiciona os elementos ao painel
   stage.appendChild(h3);
@@ -275,6 +280,39 @@ const printArq = (clearFunction = clearElement) => {
   stage.appendChild(lineBreak);
   stage.appendChild(text);
 }
+
+const printServ = (clearFunction = clearElement) => {
+  // seleciona o painel
+  const [stage] = document.getElementsByClassName('stage-general');
+
+  // limpa o painel
+  clearFunction(stage);
+
+  // cria os elementos
+  const image = document.createElement('img');
+  image.setAttribute('src', './images/servicos.jpg');
+  image.setAttribute('alt', 'Serviços');
+  image.setAttribute('class', 'serv-img');
+  image.style.backgroundColor = 'white';
+
+  const lineBreak = document.createElement('br');
+
+  const text = document.createElement('p');
+  text.setAttribute('class', 'serv-text');
+  text.innerHTML = `<br>O site foi desenvolvido com as mais recentes tecnologias
+
+    <strong>(HTML5, CSS3, Javascript)</strong>, e está hospedado na <strong>AWS</strong>.<br>
+    <br>
+    A AWS é uma plataforma de <strong>computação em nuvem</strong> que oferece serviços de
+    <strong>baixa latência, segurança e armazenamento durável</strong>.
+    <br><br><br><br><br><br><br>`;
+
+  // adiciona os elementos ao painel
+  stage.appendChild(image);
+  stage.appendChild(lineBreak);
+  stage.appendChild(text);
+}
+
 
 const headerClick = (key = 0, clearFunction = clearElement) => {
   const buttons = document.getElementsByClassName('header-option');
@@ -300,6 +338,7 @@ const headerClick = (key = 0, clearFunction = clearElement) => {
   switch (key) {
     case 1: // serviços
       clearFunction(stageGeneral[0]);
+      printServ();
       break;
     case 2: // arquitetura
       clearFunction(stageGeneral[0]);
