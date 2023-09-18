@@ -59,7 +59,16 @@ const clearElement = (element) => {
 };
 
 // função que imprime as infos no painel
-const printInfo = (key = 0, members = groupMembers, clearFunction = clearElement) => {
+const printInfo = (key = 1, members = groupMembers, clearFunction = clearElement) => {
+  const buttons = document.getElementsByClassName('menu-option');
+  const activeBtn = document.getElementById(`name-${key}`);
+
+  for (let i = 0; i < buttons.length; i += 1) {
+    buttons[i].style.textShadow = 'none';
+  };
+
+  activeBtn.style.textShadow = '0px 4px 4px rgba(0, 0, 0, 0.25)';
+  
   // seleciona o painel
   const panel = document.getElementById('panel');
 
@@ -138,25 +147,6 @@ const printInfo = (key = 0, members = groupMembers, clearFunction = clearElement
 
 printInfo();
 
-const headerMap = {
-  0: {
-    name: 'Projeto',
-    content: 'Projeto',
-  },
-  1: {
-    name: 'Serviços',
-    content: 'Serviços',
-  },
-  2: {
-    name: 'Arquitetura',
-    content: 'Arquitetura',
-  },
-  3: {
-    name: 'Equipe',
-    content: 'Equipe',
-  },
-};
-
 const stringsProjeto = {
   0: 'Bem-vindo ao Grupo 1 Soluções Web',
   1: `Somos uma equipe especializada em <b>criação</b> e <b>hospedagem</b> de sites,
@@ -189,7 +179,6 @@ const stringsProjeto = {
 };
 
 // home
-
 const printHome = (strings = stringsProjeto, clearFunction = clearElement) => {
   // seleciona o painel
   const [stage] = document.getElementsByClassName('stage-general');
@@ -288,6 +277,15 @@ const printArq = (clearFunction = clearElement) => {
 }
 
 const headerClick = (key = 0, clearFunction = clearElement) => {
+  const buttons = document.getElementsByClassName('header-option');
+  const activeBtn = document.getElementById(`btn-${key}`);
+
+  for (let i = 0; i < buttons.length; i += 1) {
+    buttons[i].style.textShadow = 'none';
+  };
+
+  activeBtn.style.textShadow = '0px 4px 4px rgba(0, 0, 0, 0.25)';
+
   const stageTeam = document.getElementsByClassName('stage-team');
   const stageGeneral = document.getElementsByClassName('stage-general');
 
