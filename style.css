@@ -49,7 +49,7 @@
 }
 
 .stage-general {
-  width: 100%;
+  max-width: 80%;
   height: 100%;
   padding: 20px;
   display: inline;
@@ -58,16 +58,19 @@
 .stage-general h3 {
   font-family: Archivo Narrow;
   color: #026592;
+  padding-left: 10px;
 }
 
 .stage-general p {
+  max-width: 900px;
   font-family: Archivo Narrow;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   color: #026592;
-  text-overflow: ellipsis;
+  text-overflow:inherit;
+  padding-left: 20px;
 }
 
 .stage-team {
@@ -133,6 +136,18 @@
 
 .board img {
   border: solid 1px #026592;
+}
+
+.serv-img {
+  width: 60%;
+  height: 100%;
+  padding: 20px;
+}
+
+.arquitetura-img {
+  width: 60%;
+  height: 100%;
+  padding: 20px;
 }
 
 .footer {
